@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Chat Cost Calculator — Spicy Ranks</title>
+  <meta name="description" content="Compare AI companion chat subscriptions, included credits, and top-up costs at your daily usage. Free, open-source calculator by Spicy Ranks. No login or API key.">
+  <meta name="theme-color" content="#101014">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="pepper.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="calculator.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#calculator">Skip to calculator</a>
+  <header class="site-header wrap">
+    <a class="brand" href="https://spicyranks.ai/" aria-label="Spicy Ranks home"><img src="pepper.png" width="34" height="34" alt=""><span>spicy<span class="brand-light">ranks</span><span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main"><a href="#how-it-works">How it works</a><a class="header-cta" href="https://spicyranks.ai/">Explore reviews <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div><p class="eyebrow"><span class="tiny-dot"></span> THE SPICY RANKS TOOLBOX <span class="tag">01 / FREE TOOL</span></p>
+        <h1 id="hero-title">More chat.<br><span>Less guesswork.</span></h1>
+        <p class="hero-copy">An AI chat cost calculator for your actual habits. Compare plans, decode credits, and see what a month of conversation could cost.</p>
+        <div class="benefits"><span><i aria-hidden="true">✓</i> No API key</span><span><i aria-hidden="true">✓</i> Runs in your browser</span><span><i aria-hidden="true">✓</i> Open source</span></div>
+      </div>
+      <aside class="hero-note"><span class="note-symbol" aria-hidden="true">“</span><p>That $9 plan?<br>It might be a $29 month.</p><span>Whole top-up packs add up. Let’s do the math.</span></aside>
+    </section>
+
+    <noscript><p class="notice">This calculator needs JavaScript. Enable it to compare plans. No data is sent to a server.</p></noscript>
+    <div class="workspace" id="calculator">
+      <aside class="usage-panel panel" aria-labelledby="usage-title">
+        <div class="section-number">01 <span>YOUR HABITS</span></div>
+        <h2 id="usage-title">How much do you chat?</h2><p class="subtle">Count messages you send, using the same definition as the plan.</p>
+        <label for="daily">Messages per day</label>
+        <div class="number-unit"><input id="daily" type="number" min="0" max="10000" step="1" value="50" inputmode="numeric"><span>/ day</span></div>
+        <div class="presets" aria-label="Usage presets"><button type="button" data-daily="20">Casual <span>20</span></button><button type="button" data-daily="50" class="active" aria-pressed="true">Regular <span>50</span></button><button type="button" data-daily="150">Deep dives <span>150</span></button></div>
+        <label for="days">Days in your billing month</label><select id="days"><option value="28">28 days</option><option value="30" selected>30 days</option><option value="31">31 days</option></select>
+        <div class="monthly-count"><span id="monthly-count">1,500</span><span>messages this month</span></div>
+        <label for="budget">Monthly budget <span class="optional">USD</span></label><div class="number-unit"><span>$</span><input id="budget" type="number" min="0" max="1000000" step="0.01" value="30" inputmode="decimal"></div>
+        <p class="privacy-note"><span aria-hidden="true">◈</span> Your figures stay in this tab.<br>No accounts, tracking, or saved history.</p>
+      </aside>
+      <div class="comparison-area">
+        <section aria-labelledby="plans-title"><div class="section-heading"><div><div class="section-number">02 <span>THE CONTENDERS</span></div><h2 id="plans-title">Put the plans side by side.</h2></div><button id="add-plan" class="button secondary" type="button">+ Add plan</button></div>
+          <p class="example-note"><span>EXAMPLE PLANS</span> These are made-up prices. Replace them with current plan details.</p>
+          <div id="plans" class="plan-grid"></div>
+        </section>
+        <section class="results-section" aria-labelledby="results-title"><div class="section-heading"><div><div class="section-number">03 <span>THE REAL NUMBERS</span></div><h2 id="results-title">Your estimated monthly spend.</h2></div><span class="live-indicator"><span class="tiny-dot"></span> Updates as you type</span></div>
+          <p id="usage-error" class="error" role="alert" hidden></p>
+          <div id="results" class="result-grid" aria-live="polite" aria-atomic="true"></div>
+          <div class="results-footer"><span id="result-summary"></span><div><button id="copy" class="text-button" type="button">Copy summary <span aria-hidden="true">↗</span></button><button id="csv" class="text-button" type="button">Download CSV <span aria-hidden="true">↓</span></button></div></div>
+          <p id="action-status" class="action-status" role="status"></p>
+        </section>
+      </div>
+    </div>
+    <section id="how-it-works" class="explanation"><div><p class="eyebrow">NO MYSTERY MATH</p><h2>One month. Every credit accounted for.</h2></div><div class="explanation-copy"><p>We multiply your daily messages by the days in your billing month, then by each plan’s credits per message. Any shortfall is covered with <strong>whole top-up packs</strong>, rounded up. Your estimate is the subscription fee plus those packs.</p><p>Use the same currency for every plan (the display is USD). For plans billed yearly, enter the monthly equivalent; your upfront payment will differ. Estimates exclude tax, discounts, credit rollover, daily resets, voice and image use, and changing model rates. “Unlimited” assumes no extra message charge; fair-use rules may still apply. A lower cost isn’t a quality ranking.</p><details><summary>What if a platform uses tokens or daily allowances?</summary><p>LLM tokens are not fixed-price message credits. This calculator assumes a fixed credit charge per sent message and a monthly allowance. Use a representative average only if you understand the variation. It does not model daily credit expiry, context-window costs, or variable token billing. For those plans, the result may not reflect actual spend.</p></details></div></section>
+    <section class="review-cta"><div><span class="eyebrow">PRICE IS ONLY PART OF THE STORY</span><h2>Find a chat worth paying for.</h2><p>Compare features, limitations, and hands-on verdicts on Spicy Ranks.</p></div><a class="button primary" href="https://spicyranks.ai/">Explore Spicy Ranks <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="wrap site-footer"><span>A free tool by <a href="https://spicyranks.ai/">Spicy Ranks</a>. Built for clearer comparisons.</span><div><a href="https://github.com/jack-srai/spicy-chat-cost-calculator">View source <span aria-hidden="true">↗</span></a><span>Linked review site is 18+.</span></div></footer>
+  <dialog id="copy-dialog"><h2>Copy your comparison</h2><p>Your browser couldn’t copy automatically. Select and copy the text below.</p><textarea id="copy-text" aria-label="Comparison summary" rows="12" readonly></textarea><button id="close-copy" class="button primary" type="button">Done</button></dialog>
+</body>
+</html>
