@@ -2,6 +2,8 @@
 
 **What will your AI companion chat plan actually cost this month?**
 
+[**Use the free calculator →**](https://jack-srai.github.io/spicy-chat-cost-calculator/)
+
 A free, open-source tool by [Spicy Ranks](https://spicyranks.ai/) for comparing AI chat subscriptions, message credits, and top-up packs at your expected usage. Enter your own prices, compare up to four plans, and export the results. Everything runs in your browser. No account, API key, installation, or backend required.
 
 ![Spicy Ranks AI Chat Cost Calculator](preview.jpg)
@@ -77,7 +79,7 @@ Tests cover pack rounding, quota shortfalls, unlimited/free plans, decimal preci
 | `tests/calculator.test.js` | Calculation regression tests |
 | `serve.js` | Optional localhost-only preview server |
 
-Any static host can serve the five application files plus `pepper.png`. For GitHub Pages, choose **Settings → Pages → Deploy from a branch → main → / (root)**. This publishes the tool, not the main Spicy Ranks application.
+Any static host can serve the application files and `pepper.png`. For GitHub Pages, choose **Settings → Pages → Deploy from a branch → main → / (root)**. This publishes the tool, not the main Spicy Ranks application.
 
 ## About Spicy Ranks
 
