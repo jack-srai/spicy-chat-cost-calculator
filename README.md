@@ -71,13 +71,13 @@ npm test
 
 Tests cover pack rounding, quota shortfalls, unlimited/free plans, decimal precision, zero usage, invalid input, and CSV formula escaping. The calculation module is shared between the browser and tests.
 
-| File | Purpose |
-| --- | --- |
-| `index.html` / `styles.css` | Responsive branded interface |
-| `calculator.js` | Pure calculation and CSV escaping functions |
-| `app.js` | Form interactions, comparison results, and exports |
-| `tests/calculator.test.js` | Calculation regression tests |
-| `serve.js` | Optional localhost-only preview server |
+| File                        | Purpose                                            |
+| --------------------------- | -------------------------------------------------- |
+| `index.html` / `styles.css` | Responsive branded interface                       |
+| `calculator.js`             | Pure calculation and CSV escaping functions        |
+| `app.js`                    | Form interactions, comparison results, and exports |
+| `tests/calculator.test.js`  | Calculation regression tests                       |
+| `serve.js`                  | Optional localhost-only preview server             |
 
 Any static host can serve the application files and `pepper.png`. For GitHub Pages, choose **Settings → Pages → Deploy from a branch → main → / (root)**. This publishes the tool, not the main Spicy Ranks application.
 
@@ -86,6 +86,10 @@ Any static host can serve the application files and `pepper.png`. For GitHub Pag
 [Spicy Ranks](https://spicyranks.ai/) publishes hands-on reviews and comparisons of adult AI chat, image, voice, and video platforms, including pricing and free-tier limits. The review site is **18+** and may earn affiliate commissions. This calculator contains no adult imagery, provider affiliate links, or paid placements.
 
 Use the calculator for the numbers, then read the reviews for the features and tradeoffs.
+
+## Questions and ideas
+
+Use [Discussions](https://github.com/jack-srai/spicy-chat-cost-calculator/discussions) for questions, feature ideas, or feedback. For reproducible bugs, open an issue with sample plan inputs and the result you expected. Please do not include account credentials or private conversations.
 
 ## License
 
